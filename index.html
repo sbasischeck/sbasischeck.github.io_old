@@ -1,123 +1,80 @@
-<!DOCTYPE html>
-	<html class="sl-root decks live live-server">
-	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Introduction to functional programming</title>
+    <meta name="author" content="Roland Knipp">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css" id="theme">
+   
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<title>Test</title>
-		<meta name="description" content="A presentation created with Slides." />
-		<meta property="og:title" content="Test" />
-		<meta property="og:description" content="A presentation created with Slides." />
-		<meta property="og:site_name" content="Slides" />
-		<meta property="og:image" content="https://s3.amazonaws.com/media-p.slid.es/thumbnails/0dffee8b3da672e509a78609c04c8d0b/thumb.jpg?1571443366" />
-		<meta property="og:type" content="article" />
-		<meta property="og:url" content="https://slides.com/sbasischeck/test/live" />
-		<meta property="fb:app_id" content="146002942236376" />
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    <!--[if lt IE 9]>
+    <script src="/lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="reveal">
 
-		<meta name="mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-		<link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,600,700&subset=latin,cyrillic-ext,greek-ext,greek,latin-ext,cyrillic" rel="stylesheet" type="text/css" data-application-font="opensans">
-		<link rel="stylesheet" media="all" href="//assets.slid.es/assets/slides/slides-2b712357092f86c1ae8835891d01f4694c873806772909994aae03b56e3e89ab.css" />
-		<link rel="stylesheet" media="all" href="//assets.slid.es/assets/application-6536aa36b7a831b0375e810db48db85c01e457c2e20d9beaad748a43015f49a6.css" />
-		<link rel="stylesheet" media="all" href="//assets.slid.es/assets/deck-v2-e8bdfbc5bfa13f57ec6043ef9d36fb8a4496dfbd957caedde230c8bd64c298bd.css" />
+      <div class="slides">
+        <section>
+          <h1>Introduction to functional programming</h1>
+	  <p><a href="http://www.twitter.com/sbasischeck">@sbasischeck</a></p>
+          <p><a href="http://www.github.com/sbasischeck/sitnl_2015">github.com / sbasischeck / sitnl_2015</a></p>
+        </section>
+        <section data-markdown="presentation.md"  
+                 data-separator="^\n\n\n"  
+                 data-separator-vertical="^\n\n"
+		 data-separator-notes="^Note:">
+        </section>
+        <section>
+          <h1 id="questions-">Questions?</h1>
+          <p><a href="http://www.twitter.com/sbasischeck">@sbasischeck</a></p>
+	  <p><a href="http://www.github.com/sbasischeck/sitnl_2015">github.com / sbasischeck / sitnl_2015</a></p>
+	  <pre><code></code></pre><!-- needed for syntax highlighting to work. Don't know why....-->
+	</section>
+	<section data-markdown="references.md"  
+                 data-separator="^\n\n\n"  
+                 data-separator-vertical="^\n\n"
+		 data-separator-notes="^Note:">
+        </section>
+      </div>
 
-
-
-<style id="user-css-output" type="text/css"></style>
-		<meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="GZQGIyry/TSNNjBZav3nRZ3Zw22etk2snBnQJ6fus2PjObXP2WxTwvYQOnuIvPtv1FPPw1KMIKjZIaPGNPNTUQ==" />
-		<script type="text/javascript">
-  if( navigator.doNotTrack !== '1' && !/dnt=1/.test( window.location.search ) ) {
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-39670045-1', 'auto');
-    ga('send', 'pageview');
-
-  }
-</script>
-			<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:site" content="@Slides">
-	<meta name="twitter:title" content="Test">
-	<meta name="twitter:description" content="A presentation created with Slides.">
-	<meta name="twitter:image" content="https://s3.amazonaws.com/media-p.slid.es/thumbnails/0dffee8b3da672e509a78609c04c8d0b/thumb.jpg?1571443366">
-
-	</head>
-	<body>
-		<div class="page-loader visible">
-			<div class="page-loader-inner">
-				<div class="page-loader-spinner"></div>
-				<p class="page-loader-message">Loading deck</p>
-			</div>
-		</div>
-
-		
-
-<header class="global-header ">
-  <div class="wrapper">
-    <div class="slides-logo logo-animation">
-      <a class="symbol" href="/">
-        <div class="box-1"></div>
-        <div class="box-2"></div>
-        <div class="box-3"></div>
-      </a>
-      <a class="word" href="/"></a>
     </div>
-    <div class="nav-wrapper">
-      <ul class="nav">
-          <li class="nav-item " data-page-id="home/explore">
-            <a class="nav-item-anchor" href="/explore"><span class="nav-item-label wide">Explore</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-item-anchor" href="/sbasischeck/new"><span class="nav-item-label">New deck</span></a>
-          </li>
-          <li class="nav-item overflow-disabled profile-button">
-            <a class="nav-item-anchor" href="/sbasischeck">
-              <span class="nav-item-label">sbasischeck</span>
-              <span class="nav-item-burger">
-                <span class="nav-item-burger-1"></span>
-                <span class="nav-item-burger-2"></span>
-                <span class="nav-item-burger-3"></span>
-              </span>
-            </a>
-          </li>
-      </ul>
-    </div>
-  </div>
-</header>
 
-
-
-		<div class="reveal-viewport theme-font-montserrat theme-color-white-blue">
-			<div class="reveal">
-				<div class="slides">
-					<section data-id="25683938e7de60d8a8c78aadf34cda85"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 238px; height: auto;" data-block-id="0d69d43388707a7a29202edc16e7da56"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
-<h1>Test</h1>
-</div></div></section><section class="stack" data-id="fe096b854bd1e5aec8623a2d56feba6f"><section data-id="3ebf97ef541c066f55cdcc81a1cf74af"><div class="sl-block" data-block-type="text" data-block-id="7f0fdb685a8409528f15a1ed86b00316" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 331px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
-<p>Seite 2</p>
-</div></div></section><section data-id="30b25fddf2cb3b4e677a0c7403c66569"><div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 331px;" data-block-id="a1cc243200f843988a7d1b3db78dd0b9"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;" dir="ui">
-<p>Seite 2.1</p>
-</div></div></section><section data-id="9a3dd6d05838f253c71231580efa8338"><div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 331px;" data-block-id="ff33c46cc066114b5c5f132c01c8b19c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;" dir="ui">
-<p>Seite 2.2</p>
-</div></div></section></section><section data-id="187ddabcfcc6eb1865d486f803234b47"><div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 331px;" data-block-id="4d9351b6716ae58a74b145cf8b226e5a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;" dir="ui"><p>Seite 3</p></div></div></section>
-				</div>
-				<div class="dimmer"></div>
-			</div>
-		</div>
-
-		
-		
-<script>
-	var SLConfig = {"current_user":{"id":1144999,"username":"sbasischeck","name":"","description":"","thumbnail_url":"https://www.gravatar.com/avatar/bdb0e4846dce8a8dbdd4f72e5098a277?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","paid":false,"pro":false,"lite":false,"team_id":null,"settings":{"id":3955747,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null,"editor_grid":true,"editor_grid_on_top":false,"editor_snap":true,"editor_fixed_notes":false,"developer_mode":false,"speaker_layout":null,"speaker_theme":null,"phone_number":null,"phone_country_code":null,"media_sources":null,"export_controls":null,"export_slide_number":null,"export_slide_notes":null,"export_separate_fragments":null},"email":"sbasischeck@gmail.com","notify_on_receipt":true,"billing_address":null,"billing_vat_id":null,"editor_tutorial_completed":true,"manually_upgraded":false,"deck_user_editor_limit":null,"storage_used":0,"storage_limit":262144000},"deck":{"id":1627691,"slug":"test","title":"Test","description":"","width":960,"height":700,"visibility":"all","published_at":"2019-10-18T23:58:55.315Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/0dffee8b3da672e509a78609c04c8d0b/thumb.jpg?1571443366","view_count":0,"user":{"id":1144999,"username":"sbasischeck","name":"","description":"","thumbnail_url":"https://www.gravatar.com/avatar/bdb0e4846dce8a8dbdd4f72e5098a277?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","paid":false,"pro":false,"lite":false,"team_id":null,"settings":{"id":3955747,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null}},"background_transition":"slide","transition":"slide","theme_id":null,"theme_font":"montserrat","theme_color":"white-blue","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":true,"rolling_links":false,"center":false,"shuffle":null,"should_loop":false,"share_notes":null,"slide_number":null,"slide_count":6,"rtl":false,"version":2,"collaborative":null,"deck_user_editor_limit":null,"data_updated_at":1571443366771,"font_typekit":null,"font_google":null,"time_limit":null,"upsizing_enabled":null,"notes":{}},"user":{"id":1144999,"username":"sbasischeck","name":"","description":"","thumbnail_url":"https://www.gravatar.com/avatar/bdb0e4846dce8a8dbdd4f72e5098a277?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","paid":false,"pro":false,"lite":false,"team_id":null,"settings":{"id":3955747,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null}}};
-</script>
-		<script src="//assets.slid.es/assets/application-04bc7d65ab2073fce553ed481ed37691893e38be6302655dd1f7e30a28772901.js" defer="defer"></script>
-		<script src="//assets.slid.es/assets/socket.io-281b07f35b3367f9273afcc164829c9429ca3b48f43695ab5d439641b7de18a4.js" defer="defer"></script>
-		<script src="//assets.slid.es/assets/deck-3740c0acc2d6ecce79eae47501ce0be97f5f3e5bb1d9fe69e1036a34a97a1a57.js" defer="defer"></script>
-		
-
-	</body>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <script>
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+         controls: true,
+         progress: true,
+         history: true,
+         center: true,
+         transition: 'slide', // none/fade/slide/convex/concave/zoom
+         // Optional reveal.js plugins
+         dependencies: [
+                { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+		{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+		{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+		{ src: 'plugin/zoom-js/zoom.js', async: true },
+		{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+    </script>
+  </body>
 </html>
